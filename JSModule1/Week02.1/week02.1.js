@@ -77,7 +77,7 @@ let part4 =
 
 console.log(part4);
 
-part4 = part4.replace(/ good/gi, ""); //including a space here so if we had a "feelgood" in the string the "good" stays in place.
+part4 = part4.replace(/\bgood /gi, ""); //including a space here so if we had a "feelgood" in the string the "good" stays in place.
 
 console.log(part4);
 
