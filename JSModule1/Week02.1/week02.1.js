@@ -60,13 +60,13 @@ const kantoStarters = [
   }
 ];
 
-const pokemonName ="name";
+const pokemonName = "name";
 
 kantoStarters.forEach(pokemon => {
-    console.log(pokemon.name);
-    pokemon.pokemonCry();
-    return;
-  });
+  console.log(pokemon.name);
+  pokemon.pokemonCry();
+  return;
+});
 
 //part 3
 console.log("----------------------Part 3----------------------");
@@ -77,11 +77,18 @@ let part4 =
 
 console.log(part4);
 
-part4 = part4.replace(/\bgood /gi, ""); //including a space here so if we had a "feelgood" in the string the "good" stays in place.
+part4 = part4.replace(/\bgood\b/gi, ""); //including a space here so if we had a "feelsgood" in the string the "good" stays in place. 
 
 console.log(part4);
 
-//there is probably a better way of doing this 
+let part4b =
+  "Hello, it is a good day, I eat goody bananas, I do not like the word feelsgood";
+
+part4b = part4b.replace(/\b good\b/gi, ""); //edit: it was wrong, redid it with a "kinda" proper method with \b so both feelsgood and goody passes without problems
+
+console.log(part4b);
+
+//there is probably a better way of doing this
 
 //part 4
 console.log("----------------------Part 4----------------------");
@@ -97,4 +104,3 @@ const isDivisible = n => {
 };
 
 isDivisible(0);
-
